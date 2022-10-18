@@ -13,3 +13,11 @@
 - プロジェクトの作成
 
 の対応をお願いします。
+
+## Airtable のアカウントを準備しましょう
+
+- [Airtable のアカウント取得手順](https://github.com/1ft-seabass/ma-hackathon-qa-and-knowledge-202210/blob/master/docs/handson/airtable/00-preparation.md)
+
+## LINE Notify のトークンを準備しましょう
+
+- [LINE Notify のトークン取得手順](https://github.com/1ft-seabass/ma-hackathon-qa-and-knowledge-202210/blob/master/docs/handson/line_notify/README.md)
