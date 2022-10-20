@@ -1,0 +1,482 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#"></head>
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="05-line-bot.html">
+        <meta property="og:image" content="https://i.gyazo.com/00afcc3de9343b7aa590beffd11e69b7.png">
+        <meta property="og:title" content="[enebular ハンズオン資料] オウム返し LINE BOT をつくってみる">
+        <meta property="og:description" content="enebular ハンズオン資料です">
+        <meta property="og:locale" content="ja">
+        <title>[enebular ハンズオン資料] オウム返し LINE BOT をつくってみる</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="enebular ハンズオン資料です">
+        <meta name="generator" content="HonKit 3.7.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06-discover-flow.html" />
+    
+    
+    <link rel="prev" href="04-api-connect.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00-preparation/">
+            
+                <a href="00-preparation/">
+            
+                    
+                    事前準備
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-introduction.html">
+            
+                <a href="01-introduction.html">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="02-enebular-start.html">
+            
+                <a href="02-enebular-start.html">
+            
+                    
+                    enebular の準備
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03-first-flow.html">
+            
+                <a href="03-first-flow.html">
+            
+                    
+                    データの流れをつくってみる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04-api-connect.html">
+            
+                <a href="04-api-connect.html">
+            
+                    
+                    柴犬画像 API につないでみよう
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="05-line-bot.html">
+            
+                <a href="05-line-bot.html">
+            
+                    
+                    オウム返し LINE BOT をつくってみる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06-discover-flow.html">
+            
+                <a href="06-discover-flow.html">
+            
+                    
+                    Discover Flow 体験
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >オウム返し LINE BOT をつくってみる</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="line-bot-ノードでオウム返し-line-bot-をつくってみる"><a name="line-bot-ノードでオウム返し-line-bot-をつくってみる" class="plugin-anchor" href="#line-bot-ノードでオウム返し-line-bot-をつくってみる"><i class="fa fa-link" aria-hidden="true"></i></a>LINE BOT ノードでオウム返し LINE BOT をつくってみる</h1>
+<p><img src="https://i.gyazo.com/4d420ccaf6cad0706f056f177c3c86c6.png" alt="4d420ccaf6cad0706f056f177c3c86c6"></p>
+<p>LINE BOT ノードでオウム返し LINE BOT をつくってみます。</p>
+<p><img src="https://i.gyazo.com/7dc340b3f7321e8dce59947cb3e82d50.png" alt="7dc340b3f7321e8dce59947cb3e82d50"></p>
+<p>このようなフローを作ります。</p>
+<h2 id="フローのタブを追加して今回のフローをはじめる"><a name="フローのタブを追加して今回のフローをはじめる" class="plugin-anchor" href="#フローのタブを追加して今回のフローをはじめる"><i class="fa fa-link" aria-hidden="true"></i></a>フローのタブを追加して今回のフローをはじめる</h2>
+<p>今回のフローは新しいタブで進めましょう。</p>
+<p><img src="https://i.gyazo.com/bfacbb2d76a7dd13d00cde6b970fb7d5.png" alt="bfacbb2d76a7dd13d00cde6b970fb7d5"></p>
+<p>こちらの＋ボタンからフローのタブを作成します。新しくできたフローのタブで作業をはじめましょう。</p>
+<h2 id="作成したbotのチャンネルシークレットとチャンネルアクセストークンを準備"><a name="作成したbotのチャンネルシークレットとチャンネルアクセストークンを準備" class="plugin-anchor" href="#作成したbotのチャンネルシークレットとチャンネルアクセストークンを準備"><i class="fa fa-link" aria-hidden="true"></i></a>作成したBOTのチャンネルシークレットとチャンネルアクセストークンを準備</h2>
+<p><img src="https://i.gyazo.com/fec310ce30185a693f6e30be33779d79.png" alt="fec310ce30185a693f6e30be33779d79"></p>
+<p>LINE Develipers <a href="https://developers.line.biz/console" target="_blank">https://developers.line.biz/console</a> にログインして、作成したBOTのチャンネルシークレットとチャンネルアクセストークンを準備します。</p>
+<ul>
+<li>作成した BOT にアクセス</li>
+<li>チャネル基本設定を選択してチャネルシークレットをコピーして準備</li>
+<li>Messaging API 設定を選択してチャンネルアクセストークンをコピーして準備</li>
+</ul>
+<h2 id="node-red-contrib-line-messaging-api-のインストール"><a name="node-red-contrib-line-messaging-api-のインストール" class="plugin-anchor" href="#node-red-contrib-line-messaging-api-のインストール"><i class="fa fa-link" aria-hidden="true"></i></a>node-red-contrib-line-messaging-api のインストール</h2>
+<p>LINE Messagin API を利用できる Node-RED のノード node-red-contrib-line-messaging-api を使います。</p>
+<ul>
+<li>参考文献<ul>
+<li>Node-REDでLINE Bot作成が簡単になったよ / メッセージタイプほぼ全部解説<ul>
+<li><a href="https://zenn.dev/ukkz/articles/a389105e400ea2" target="_blank">https://zenn.dev/ukkz/articles/a389105e400ea2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>右のメニューから メニュー ＞ パレットの管理 を表示して、ノードの追加タブをクリックしてノード追加画面に移動します。</p>
+<p><img src="https://i.gyazo.com/0ce468bb98cf21d85df9b8ae915fabfd.png" alt="0ce468bb98cf21d85df9b8ae915fabfd"></p>
+<p>node-red-contrib-line-messaging-api で検索してノードを追加ボタンをクリックしてノードをインストールします。</p>
+<p><img src="https://i.gyazo.com/c7e9b9e7151582019e51c8316cdef4d4.png" alt="c7e9b9e7151582019e51c8316cdef4d4"></p>
+<p>パレットにノードが追加されました。</p>
+<h2 id="フローを作る"><a name="フローを作る" class="plugin-anchor" href="#フローを作る"><i class="fa fa-link" aria-hidden="true"></i></a>フローを作る</h2>
+<p><img src="https://i.gyazo.com/710bca68444a4b81197191017afe4c8d.png" alt="710bca68444a4b81197191017afe4c8d"></p>
+<p>LINE ノードのカテゴリで Webhook ノードを配置します。これは Node.js のプログラムの時の、LINE Messaging のデータが入ってくる入り口の役割です。</p>
+<p><img src="https://i.gyazo.com/a6a64c590dc3dbdaecb2288e5d00a0ef.png" alt="a6a64c590dc3dbdaecb2288e5d00a0ef"></p>
+<p>Reply ノードを Webhook ノードの横に配置します。</p>
+<p><img src="https://i.gyazo.com/aeb536a5fc5fc0be0346bee082dafd9a.png" alt="aeb536a5fc5fc0be0346bee082dafd9a"></p>
+<p>Reply ノードと Webhook ノードをつなぎます。</p>
+<h2 id="webhook-ノードの設定"><a name="webhook-ノードの設定" class="plugin-anchor" href="#webhook-ノードの設定"><i class="fa fa-link" aria-hidden="true"></i></a>Webhook ノードの設定</h2>
+<p><img src="https://i.gyazo.com/8161026e887bc2315168e07b06343a86.png" alt="8161026e887bc2315168e07b06343a86"></p>
+<p>/webhook を窓口にするよう設定します。Webhook ノードをダブルクリックしてプロパティを表示します。</p>
+<p><img src="https://i.gyazo.com/615890f590aced84a1587e42388c47e9.png" alt="615890f590aced84a1587e42388c47e9"></p>
+<p>/webhook と入力して完了ボタンをクリックします。</p>
+<h2 id="reply-ノードの設定"><a name="reply-ノードの設定" class="plugin-anchor" href="#reply-ノードの設定"><i class="fa fa-link" aria-hidden="true"></i></a>Reply ノードの設定</h2>
+<p>作成したBOTのチャンネルシークレットとチャンネルアクセストークンを設定します。</p>
+<p><img src="https://i.gyazo.com/9f5c67592af9be3bd624480456fe8501.png" alt="9f5c67592af9be3bd624480456fe8501"></p>
+<p>Reply ノードをダブルクリックしてプロパティを表示します。</p>
+<p><img width="575" alt="image.png (12.6 kB)" src="https://img.esa.io/uploads/production/attachments/3062/2022/09/28/8131/b9476e39-49fb-49d5-8745-d8d2a56f8811.png"></p>
+<p>/webhook と入力して完了ボタンをクリックします。</p>
+<p><img src="https://i.gyazo.com/615890f590aced84a1587e42388c47e9.png" alt="615890f590aced84a1587e42388c47e9"></p>
+<p>Sercret には チャンネルシークレット、AccessToken にはチャンネルアクセストークンを反映して完了ボタンをクリックします。</p>
+<h2 id="デプロイ"><a name="デプロイ" class="plugin-anchor" href="#デプロイ"><i class="fa fa-link" aria-hidden="true"></i></a>デプロイ</h2>
+<p><img src="https://i.gyazo.com/19e98ad3d0ad7297e36ad4c035cb36c4.png" alt="19e98ad3d0ad7297e36ad4c035cb36c4"></p>
+<p>デプロイします。</p>
+<h2 id="サーバー公開"><a name="サーバー公開" class="plugin-anchor" href="#サーバー公開"><i class="fa fa-link" aria-hidden="true"></i></a>サーバー公開</h2>
+<p>これで enebular による LINE BOT サーバーができました。</p>
+<p>今回は、この一時的に使っているエディタそのもののサーバー URL で試してみます。</p>
+<p><img src="https://i.gyazo.com/8355eb99ba9f5b82bf84301dbb7574ae.png" alt="8355eb99ba9f5b82bf84301dbb7574ae"></p>
+<p>右上の i というアイコンをクリックします。</p>
+<p><img src="https://i.gyazo.com/31d22a4c38d78b46dc9d6623573f5136.png" alt="31d22a4c38d78b46dc9d6623573f5136"></p>
+<p>URL をテキスト選択してコピーします。</p>
+<h2 id="webhook-url-の更新"><a name="webhook-url-の更新" class="plugin-anchor" href="#webhook-url-の更新"><i class="fa fa-link" aria-hidden="true"></i></a>Webhook URL の更新</h2>
+<p>LINE Developers で、今回使っている BOT の Messaging API 設定に移動します。</p>
+<p><img src="https://i.gyazo.com/c85ed28c0caa79951404327636ef1a44.png" alt="image"></p>
+<p>Webhook URL の項目に移動して以下の手順を行います。</p>
+<h2 id="さきほどの-url-に-webhook-をつけて反映"><a name="さきほどの-url-に-webhook-をつけて反映" class="plugin-anchor" href="#さきほどの-url-に-webhook-をつけて反映"><i class="fa fa-link" aria-hidden="true"></i></a>さきほどの URL に <code>/webhook</code> をつけて反映</h2>
+<p><img src="https://i.gyazo.com/3c32b8b9286ac4292628af21c546e08b.png" alt="image"></p>
+<p>さきほどコピーした URL <code>https://**********.herokuapp.com/</code> に <code>/webhook</code> をつけて Webhook URL の項目に入力して更新ボタンをクリックします。</p>
+<p><img src="https://i.gyazo.com/3c32b8b9286ac4292628af21c546e08b.png" alt="image"></p>
+<p>Webhook の利用がオンになっていることも確認しましょう。</p>
+<h2 id="動かしてみる"><a name="動かしてみる" class="plugin-anchor" href="#動かしてみる"><i class="fa fa-link" aria-hidden="true"></i></a>動かしてみる</h2>
+<p><img src="https://i.gyazo.com/4d420ccaf6cad0706f056f177c3c86c6.png" alt="4d420ccaf6cad0706f056f177c3c86c6"></p>
+<p>LINE BOT にメッセージを送ってオウム返しを試してみましょう。</p>
+<h2 id="エクストラ"><a name="エクストラ" class="plugin-anchor" href="#エクストラ"><i class="fa fa-link" aria-hidden="true"></i></a>エクストラ</h2>
+<ul>
+<li>このままの仕組みだとエディタが生きている時しか動かないので、ずっと動かしたいときは永続的な仕組み（クラウド実行環境）を導入します</li>
+</ul>
+<h2 id="次は"><a name="次は" class="plugin-anchor" href="#次は"><i class="fa fa-link" aria-hidden="true"></i></a>次は</h2>
+<p>左のメニューから、次に進みましょう。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04-api-connect.html" class="navigation navigation-prev " aria-label="Previous page: 柴犬画像 API につないでみよう">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06-discover-flow.html" class="navigation navigation-next " aria-label="Next page: Discover Flow 体験">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"オウム返し LINE BOT をつくってみる","level":"1.7","depth":1,"next":{"title":"Discover Flow 体験","level":"1.8","depth":1,"path":"06-discover-flow.md","ref":"06-discover-flow.md","articles":[]},"previous":{"title":"柴犬画像 API につないでみよう","level":"1.6","depth":1,"path":"04-api-connect.md","ref":"04-api-connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"05-line-bot.md","mtime":"2022-10-20T01:21:52.903Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-20T02:07:23.205Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
