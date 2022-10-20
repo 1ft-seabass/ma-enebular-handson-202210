@@ -8,3 +8,5 @@
 - [柴犬画像 API につないでみよう](04-api-connect.md)
 - [オウム返し LINE BOT をつくってみる](05-line-bot.md)
 - [Discover Flow 体験](06-discover-flow.md)
+- [プロジェクトにクラウド環境の作成](07-cloud-environment.md)
+- [クラウド実行環境 LINE BOT 作成](08-cloud-line-bot.md)

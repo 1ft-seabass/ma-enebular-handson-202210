@@ -5,12 +5,12 @@
         <meta charset="UTF-8">
         <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#"></head>
         <meta property="og:type" content="article">
-        <meta property="og:url" content="06-discover-flow.html">
+        <meta property="og:url" content="07-cloud-environment.html">
         <meta property="og:image" content="https://i.gyazo.com/00afcc3de9343b7aa590beffd11e69b7.png">
-        <meta property="og:title" content="[enebular ハンズオン資料] Discover Flow 体験">
+        <meta property="og:title" content="[enebular ハンズオン資料] プロジェクトにクラウド環境の作成">
         <meta property="og:description" content="enebular ハンズオン資料です">
         <meta property="og:locale" content="ja">
-        <title>[enebular ハンズオン資料] Discover Flow 体験</title>
+        <title>[enebular ハンズオン資料] プロジェクトにクラウド環境の作成</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="enebular ハンズオン資料です">
         <meta name="generator" content="HonKit 3.7.4">
@@ -75,10 +75,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="07-cloud-environment.html" />
+    <link rel="next" href="08-cloud-line-bot.html" />
     
     
-    <link rel="prev" href="05-line-bot.html" />
+    <link rel="prev" href="06-discover-flow.html" />
     
 
     </head>
@@ -198,7 +198,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="06-discover-flow.html">
+        <li class="chapter " data-level="1.8" data-path="06-discover-flow.html">
             
                 <a href="06-discover-flow.html">
             
@@ -211,7 +211,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="07-cloud-environment.html">
+        <li class="chapter active" data-level="1.9" data-path="07-cloud-environment.html">
             
                 <a href="07-cloud-environment.html">
             
@@ -267,7 +267,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Discover Flow 体験</a>
+        <a href="." >プロジェクトにクラウド環境の作成</a>
     </h1>
 </div>
 
@@ -282,49 +282,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="discover-flow-体験"><a name="discover-flow-体験" class="plugin-anchor" href="#discover-flow-体験"><i class="fa fa-link" aria-hidden="true"></i></a>Discover Flow 体験</h1>
-<p><a href="https://docs.enebular.com/ja/Discover/" target="_blank">Discovering Assets</a> を参考に、Discover Flow からインポートして WEB アプリを体験します。</p>
-<h2 id="discover-flow-とは"><a name="discover-flow-とは" class="plugin-anchor" href="#discover-flow-とは"><i class="fa fa-link" aria-hidden="true"></i></a>Discover Flow とは</h2>
-<p><img src="https://i.gyazo.com/5698686e5cf6c1b0eb4de64760954650.png" alt="5698686e5cf6c1b0eb4de64760954650"></p>
-<p><a href="https://blog.enebular.com/function/discover/" target="_blank">Discoverとは何か | enebular blog</a></p>
-<blockquote>
-<p>Discoverとは
-自分の作ったフローを他のユーザに使ってもらうために公開する場所のことです。</p>
-</blockquote>
-<p>このあとは、仕組みとして少し踏み込んだフローを講師の方が作っておきましたので、Discover Flow から読み込んで動かしてみます。</p>
-<h2 id="エディタ画面を閉じましょう"><a name="エディタ画面を閉じましょう" class="plugin-anchor" href="#エディタ画面を閉じましょう"><i class="fa fa-link" aria-hidden="true"></i></a>エディタ画面を閉じましょう</h2>
-<p>いま使っているエディタ画面の Chrome タブは閉じましょう。</p>
-<p><img src="https://i.gyazo.com/56405a922d23e4612caa8b3e0f1312f7.png" alt="image"></p>
-<p>編集ボタンをクリックした、フローの詳細画面がある Chrome タブに戻ります。</p>
-<h2 id="discover-flow-を開きます"><a name="discover-flow-を開きます" class="plugin-anchor" href="#discover-flow-を開きます"><i class="fa fa-link" aria-hidden="true"></i></a>Discover Flow を開きます</h2>
-<p><img src="https://i.gyazo.com/e6910307238d07c0cfb0b89c6e0901a7.png" alt="e6910307238d07c0cfb0b89c6e0901a7"></p>
-<p>右上の Discover Assets というエリアをクリックして <a href="https://enebular.com/discover" target="_blank">Discover</a> ページに移動します。</p>
-<p><img src="https://i.gyazo.com/5698686e5cf6c1b0eb4de64760954650.png" alt="5698686e5cf6c1b0eb4de64760954650"></p>
-<p>Discover ページが表示されます。</p>
-<h2 id="インポートするフローを検索"><a name="インポートするフローを検索" class="plugin-anchor" href="#インポートするフローを検索"><i class="fa fa-link" aria-hidden="true"></i></a>インポートするフローを検索</h2>
-<p><img src="https://i.gyazo.com/fa6071bacfc1a43646c0b884a74bc839.png" alt="fa6071bacfc1a43646c0b884a74bc839"></p>
-<p>こちらの検索エリアで検索します。</p>
-<p><img src="https://i.gyazo.com/c8f05e0f6f8781295c388f09cb805154.png" alt="c8f05e0f6f8781295c388f09cb805154"></p>
-<p>flow-simple-inject-debug と入力して、このように検索タイプ 名称 をクリックして検索しましょう。</p>
-<p><img src="https://i.gyazo.com/b0e0e3f971c6239d8215740d04487c67.png" alt="b0e0e3f971c6239d8215740d04487c67"></p>
-<p>フローが検索されたので、クリックします。</p>
-<p><a href="https://enebular.com/discover/flow/8f1707b1-5ac5-451d-917a-d8a81e1533a7" target="_blank">flow-simple-inject-debug</a></p>
-<p><img src="https://i.gyazo.com/7f2e73b55bc4118f87380b3776cb72f2.png" alt="7f2e73b55bc4118f87380b3776cb72f2"></p>
-<p>今回インポートするフローが表示されました。</p>
-<p><img src="https://i.gyazo.com/bb8e44c0d1ac0b78d192d0e1baa95455.png" alt="bb8e44c0d1ac0b78d192d0e1baa95455"></p>
-<p>右上にあるインポートボタンをクリックします。</p>
-<p><img src="https://i.gyazo.com/ee9533d1dc5d20abb9e034c787cf8cb9.png" alt="ee9533d1dc5d20abb9e034c787cf8cb9"></p>
-<p>インポート先というウィンドウが表示されて、インポート先のプロジェクトは今回のプロジェクトを選択し、権限は編集、デプロイ、公開選択して インポートボタンをクリックします。</p>
-<p><img src="https://i.gyazo.com/a795a417e470b9f6c04d3a2a67bc0ec7.png" alt="a795a417e470b9f6c04d3a2a67bc0ec7"></p>
-<p>インポートが完了し、プロジェクトにインポートされたフローの詳細画面が表示されます。これでインポートは完了です。</p>
-<h2 id="動かしてみる"><a name="動かしてみる" class="plugin-anchor" href="#動かしてみる"><i class="fa fa-link" aria-hidden="true"></i></a>動かしてみる</h2>
-<p><img src="https://i.gyazo.com/040208eb0965169117e7170adbc0d169.png" alt="image"></p>
-<p>Edit ボタンをクリックしてエディタを起動しましょう。</p>
-<p><img src="https://i.gyazo.com/f46e7da50fba744383fa8c1b79ba1421.png" alt="f46e7da50fba744383fa8c1b79ba1421"></p>
-<p>フローが表示されます。</p>
-<p>少し動かしてみましょう。</p>
-<p>inject ノードの色々なデータタイプを体験でき、フローで流せるデータのイメージがより深まると思います。</p>
-<p>このように、私がつくったフローが Discover Flow で公開されていて、インポートすることで、みなさんがすぐに持ってきて体験したり、自分の仕組みを加えたりすることができます。</p>
+                                <h1 id="プロジェクトにクラウド環境の作成"><a name="プロジェクトにクラウド環境の作成" class="plugin-anchor" href="#プロジェクトにクラウド環境の作成"><i class="fa fa-link" aria-hidden="true"></i></a>プロジェクトにクラウド環境の作成</h1>
+<p>プロジェクトにクラウド環境の作成を行います。</p>
+<p>enebular のクラウド環境には以下の参考文献があります。</p>
+<ul>
+<li><a href="https://blog.enebular.com/enebular/how-to-use-enebular-cloud-exec-environment/" target="_blank">新リリースのenebularクラウド実行環境の使い方 | enebular blog</a></li>
+<li><a href="https://docs.enebular.com/ja/executionenvironment/overview" target="_blank">クラウド実行環境とは · enebular</a></li>
+<li><a href="https://docs.enebular.com/ja/getstarted/CloudEEScheduleTrigger.html" target="_blank">クラウド実行環境でのスケジュールトリガーによるフローの実行 · enebular</a></li>
+<li><a href="https://docs.enebular.com/ja/getstarted/CloudEEHTTPTrigger.html" target="_blank">クラウド実行環境でのHTTPトリガーによるフローの実行 · enebular</a></li>
+<li><a href="https://docs.enebular.com/ja/getstarted/cloudeeprepareenvironment" target="_blank">クラウド実行環境の準備 · enebular</a></li>
+<li><a href="https://docs.enebular.com/ja/executionenvironment/manageexecutionenvironment" target="_blank">クラウド実行環境の管理 · enebular</a></li>
+</ul>
+<h2 id="クラウド実行環境の準備"><a name="クラウド実行環境の準備" class="plugin-anchor" href="#クラウド実行環境の準備"><i class="fa fa-link" aria-hidden="true"></i></a>クラウド実行環境の準備</h2>
+<p><img src="https://i.gyazo.com/6692cdf781b7a65707ac51925347925d.png" alt="6692cdf781b7a65707ac51925347925d"></p>
+<p><a href="https://docs.enebular.com/ja/getstarted/cloudeeprepareenvironment" target="_blank">クラウド実行環境の準備 · enebular</a> </p>
+<p>こちらの記事を参考に、クラウド実行環境の作成とLCDPノードのインポートを行います。</p>
+<h2 id="クラウド実行環境でのhttpトリガーによるフローの実行"><a name="クラウド実行環境でのhttpトリガーによるフローの実行" class="plugin-anchor" href="#クラウド実行環境でのhttpトリガーによるフローの実行"><i class="fa fa-link" aria-hidden="true"></i></a>クラウド実行環境でのHTTPトリガーによるフローの実行</h2>
+<p><img src="https://i.gyazo.com/756b5862faab1e4fb1403bec4ac8b1fd.png" alt="756b5862faab1e4fb1403bec4ac8b1fd"></p>
+<p><a href="https://docs.enebular.com/ja/getstarted/CloudEEHTTPTrigger.html" target="_blank">クラウド実行環境でのHTTPトリガーによるフローの実行 · enebular</a></p>
+<p>こちらの記事を参考に、クラウド実行環境でのHTTPトリガーによるフローの実行を行います。</p>
 <h2 id="次は"><a name="次は" class="plugin-anchor" href="#次は"><i class="fa fa-link" aria-hidden="true"></i></a>次は</h2>
 <p>左のメニューから、次に進みましょう。</p>
 
@@ -354,12 +330,12 @@
 
             
                 
-                <a href="05-line-bot.html" class="navigation navigation-prev " aria-label="Previous page: オウム返し LINE BOT をつくってみる">
+                <a href="06-discover-flow.html" class="navigation navigation-prev " aria-label="Previous page: Discover Flow 体験">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="07-cloud-environment.html" class="navigation navigation-next " aria-label="Next page: プロジェクトにクラウド環境の作成">
+                <a href="08-cloud-line-bot.html" class="navigation navigation-next " aria-label="Next page: クラウド実行環境 LINE BOT 作成">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -370,7 +346,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Discover Flow 体験","level":"1.8","depth":1,"next":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"path":"07-cloud-environment.md","ref":"07-cloud-environment.md","articles":[]},"previous":{"title":"オウム返し LINE BOT をつくってみる","level":"1.7","depth":1,"path":"05-line-bot.md","ref":"05-line-bot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"06-discover-flow.md","mtime":"2022-10-20T02:02:17.015Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-20T04:56:29.500Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"next":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"path":"08-cloud-line-bot.md","ref":"08-cloud-line-bot.md","articles":[]},"previous":{"title":"Discover Flow 体験","level":"1.8","depth":1,"path":"06-discover-flow.md","ref":"06-discover-flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"07-cloud-environment.md","mtime":"2022-10-20T04:42:29.612Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-20T04:56:29.500Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
