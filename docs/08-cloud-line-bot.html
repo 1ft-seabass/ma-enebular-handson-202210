@@ -281,6 +281,127 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="クラウド実行環境-line-bot-作成"><a name="クラウド実行環境-line-bot-作成" class="plugin-anchor" href="#クラウド実行環境-line-bot-作成"><i class="fa fa-link" aria-hidden="true"></i></a>クラウド実行環境 LINE BOT 作成</h1>
+<p><img src="https://i.gyazo.com/66faa3725ee4bffbcf17cee5b31fdb51.png" alt="66faa3725ee4bffbcf17cee5b31fdb51"></p>
+<p>このページでは、クラウド実行環境 LINE BOT 作成してみます。</p>
+<p>クラウド実行環境 LINE BOT 作成を作成して、LINE BOT にメッセージを送ってみると、オウム返しが返ってきます！</p>
+<h2 id="今回の-discover-flow"><a name="今回の-discover-flow" class="plugin-anchor" href="#今回の-discover-flow"><i class="fa fa-link" aria-hidden="true"></i></a>今回の Discover Flow</h2>
+<p><a href="https://enebular.com/discover/flow/67a6ffb1-a6e6-4b18-86dc-afe807f5ef97" target="_blank">lcdp-linebot-simple</a></p>
+<p><img src="https://i.gyazo.com/b114bae7b730650f53fc3672a01018a9.png" alt="b114bae7b730650f53fc3672a01018a9"></p>
+<p>今回使う Discover Flow はこちらです。</p>
+<p><a href="https://docs.enebular.com/ja/getstarted/CloudEEPrepareEnvironment.html" target="_blank">クラウド実行環境の準備</a> の手順が完了したプロジェクトにインポートボタンをクリックしてインポートしましょう。</p>
+<h2 id="フローを編集する"><a name="フローを編集する" class="plugin-anchor" href="#フローを編集する"><i class="fa fa-link" aria-hidden="true"></i></a>フローを編集する</h2>
+<p><img src="https://i.gyazo.com/3ff60d45dd48d014f0cf98f76a8f3836.png" alt="3ff60d45dd48d014f0cf98f76a8f3836"></p>
+<p>インポートして読み込めたら編集ボタンをクリックしてフローを編集しましょう。</p>
+<p><img src="https://i.gyazo.com/0e244ea9d593535ab9a9fbf2e8e4ab18.png" alt="0e244ea9d593535ab9a9fbf2e8e4ab18"></p>
+<p>このようなフローが表示されます。</p>
+<h2 id="line-bot-設定-change-ノードの設定"><a name="line-bot-設定-change-ノードの設定" class="plugin-anchor" href="#line-bot-設定-change-ノードの設定"><i class="fa fa-link" aria-hidden="true"></i></a>LINE BOT 設定 change ノードの設定</h2>
+<p>LINE BOT 設定という名前の change ノードの設定をします。今回使う LINE BOT のチャネルシークレット・
+チャネルアクセストークンをせていします。</p>
+<p><img src="https://i.gyazo.com/88b6b3e8a37ddef4100ee52f9777c6da.png" alt="88b6b3e8a37ddef4100ee52f9777c6da"></p>
+<p>ノードをダブルクリックしてプロパティ設定を表示しましょう。</p>
+<p><img src="https://i.gyazo.com/7225862d363ff6f25dc45a924c95cbb8.png" alt="7225862d363ff6f25dc45a924c95cbb8"></p>
+<p>プロパティ設定です。</p>
+<p><img src="https://i.gyazo.com/0df8cc921ae11e2a8403ce3ffbcb04a6.png" alt="0df8cc921ae11e2a8403ce3ffbcb04a6"></p>
+<p>対象の値の <code>&lt;ChannelSecret&gt;</code> を今回使う LINE BOT のチャネルシークレットに置き換えます。</p>
+<p><img src="https://i.gyazo.com/fe122212a517e87736a3ffaaeadf9655.png" alt="fe122212a517e87736a3ffaaeadf9655"></p>
+<p>対象の値の <code>&lt;ChannelAccessToken&gt;</code> を今回使う LINE BOT のチャネルアクセストークンに置き換えます。</p>
+<p><img src="https://i.gyazo.com/93e77f8a577df58051b9bd2737ec0b63.png" alt="93e77f8a577df58051b9bd2737ec0b63"></p>
+<p>設定できたら完了ボタンをクリックします。</p>
+<p><img src="https://i.gyazo.com/19e98ad3d0ad7297e36ad4c035cb36c4.png" alt="19e98ad3d0ad7297e36ad4c035cb36c4"></p>
+<p>保存ボタンをクリックしてデプロイします。</p>
+<h2 id="クラウド実行環境へのフローの反映"><a name="クラウド実行環境へのフローの反映" class="plugin-anchor" href="#クラウド実行環境へのフローの反映"><i class="fa fa-link" aria-hidden="true"></i></a>クラウド実行環境へのフローの反映</h2>
+<p><img src="https://i.gyazo.com/f856bd74daef5e8f1e65ec05c00c9789.png" alt="f856bd74daef5e8f1e65ec05c00c9789"></p>
+<p>ブラウザでエディタのタブを閉じて、以前のタブのフロー詳細画面に戻ります。</p>
+<p><img src="https://i.gyazo.com/fd45a8a5a4a3590b0f22dbe54384e682.png" alt="fd45a8a5a4a3590b0f22dbe54384e682"></p>
+<p>上部のプロジェクト名をクリックしてプロジェクト詳細画面に戻ります。</p>
+<p><img src="https://i.gyazo.com/4fb0ceae14076142819a0b448f9f24f1.png" alt="4fb0ceae14076142819a0b448f9f24f1"></p>
+<p>プロジェクト詳細画面で右メニューのクラウド実行環境をクリックします。</p>
+<p><img src="https://i.gyazo.com/7e47a0dbf363c44b6f1e139742543ec0.png" alt="7e47a0dbf363c44b6f1e139742543ec0"></p>
+<p>クラウド実行環境の一覧が表示されたので、一覧から今回設定するクラウド実行環境をクリックします。</p>
+<p><img width="803.25" alt="2022-10-21 11.51.09.png (28.2 kB)" src="https://img.esa.io/uploads/production/attachments/3062/2022/10/21/8131/2a0993b5-add1-4307-8a29-321079ed188e.png"></p>
+<p>クラウド実行環境の詳細が表示されたので、デプロイボタンをクリックします。</p>
+<p><img src="https://i.gyazo.com/f520cd9d3ebf6d95d236e77d6d8987a1.png" alt="f520cd9d3ebf6d95d236e77d6d8987a1"></p>
+<p>今回作成したフローをクリックしてデプロイボタンをクリックします。</p>
+<p><img src="https://i.gyazo.com/51690929924f0721a89a00ecdd6df249.png" alt="51690929924f0721a89a00ecdd6df249"></p>
+<p>デプロイ中となります。</p>
+<p><img src="https://i.gyazo.com/7d60f476884cdd39a40f1dfcb4fe03bb.png" alt="7d60f476884cdd39a40f1dfcb4fe03bb"></p>
+<p>デプロイ済みになりました。</p>
+<h2 id="事前に-http-トリガーの-url-を考えておきます"><a name="事前に-http-トリガーの-url-を考えておきます" class="plugin-anchor" href="#事前に-http-トリガーの-url-を考えておきます"><i class="fa fa-link" aria-hidden="true"></i></a>事前に HTTP トリガーの URL を考えておきます</h2>
+<p>HTTP トリガーの URL は enebular の他のユーザーやプロジェクトも含めて共有して使っています。</p>
+<p>もし使いたい URL が他のユーザーやプロジェクトが、すでに取得していた場合に、設定することができずエラーになります。</p>
+<p><img src="https://i.gyazo.com/837d56ba51a68dbb5c7129b209ff8b0d.png" alt="837d56ba51a68dbb5c7129b209ff8b0d"></p>
+<p>すでに取得されていた場合は、この後の作業で、このようなエラーが起きます。</p>
+<p>ですので、なるべく重複しない URL を決めておきましょう。</p>
+<p><code>（自分の名前の英語名）-（今回のプロジェクト名）-（今日の日付）-（ランダム値）-linebot</code> と決めておきましょう。</p>
+<p>たとえば、</p>
+<ul>
+<li>自分の名前の英語名<ul>
+<li>山田太郎でしたら yamada-taro</li>
+</ul>
+</li>
+<li>今回のプロジェクト名<ul>
+<li>たとえば myproject</li>
+</ul>
+</li>
+<li>今日の日付<ul>
+<li>2022 年 10 月 21 なら 20221021</li>
+</ul>
+</li>
+<li>ランダム値<ul>
+<li>3 桁以上のランダム値　例：2736</li>
+<li>やり方は後述します</li>
+</ul>
+</li>
+</ul>
+<p>でしたら、<code>yamada-taro-myproject-20221021-2736-linebot</code> のようになります。</p>
+<p>とくにランダム値をつけないと推測されやすくなり、他との重複もしやすくなるので、必ずつけるようにしましょう。</p>
+<h3 id="ランダム値の作り方"><a name="ランダム値の作り方" class="plugin-anchor" href="#ランダム値の作り方"><i class="fa fa-link" aria-hidden="true"></i></a>ランダム値の作り方</h3>
+<p>なお、ランダム値を手軽にやれるおススメは、<a href="https://www.google.com/search?q=%E4%B9%B1%E6%95%B0" target="_blank">Google 検索で「乱数」を検索</a>して上部に乱数ジェネレータが出てくるので、これを使うことです。</p>
+<p><a href="https://www.google.com/search?q=%E4%B9%B1%E6%95%B0" target="_blank">Google 検索で「乱数」を検索</a></p>
+<p><img src="https://i.gyazo.com/d939bfd4e2ff24ae75256186b51153c9.png" alt="d939bfd4e2ff24ae75256186b51153c9"></p>
+<p>右側の設定を最小を 1 で最大を 100000 にします。生成ボタンをクリックして3 桁以上のランダム値がでたら採用します。</p>
+<h2 id="クラウド実行環境の設定"><a name="クラウド実行環境の設定" class="plugin-anchor" href="#クラウド実行環境の設定"><i class="fa fa-link" aria-hidden="true"></i></a>クラウド実行環境の設定</h2>
+<p><img src="https://i.gyazo.com/178efb4b8d9a49aa07ab2161ec1ab596.png" alt="178efb4b8d9a49aa07ab2161ec1ab596"></p>
+<p>上部のメニューから設定をクリックします。このままだと設定は入力できずロックされています。</p>
+<p><img src="https://i.gyazo.com/55ff13c76fb9c6f9ee37ea92bcc89fef.png" alt="55ff13c76fb9c6f9ee37ea92bcc89fef"></p>
+<p>設定を編集をクリックします。クリックすると設定が編集できるようになります。</p>
+<p><img src="https://i.gyazo.com/548f4229cc8a661582b4ed1771f07eae.png" alt="548f4229cc8a661582b4ed1771f07eae"></p>
+<p>HTTP トリガーの項目に注目します。</p>
+<p><img src="https://i.gyazo.com/49688e8f71bcec31eea9a11af151c3fc.png" alt="49688e8f71bcec31eea9a11af151c3fc"></p>
+<p>スイッチをクリックして ON にします。</p>
+<p><img src="https://i.gyazo.com/334cb392bfab62ebe99aabd15b06359d.png" alt="334cb392bfab62ebe99aabd15b06359d"></p>
+<p>HTTP トリガーのパスを linebot と入力します。</p>
+<p><img src="https://i.gyazo.com/05896f03e963601634695b02263cea88.png" alt="05896f03e963601634695b02263cea88"></p>
+<p>下までスクロールして保存ボタンをクリックします。</p>
+<p><img src="https://i.gyazo.com/cbb4b4d1fef8e22ad3fbc99b4b8a5af0.png" alt="cbb4b4d1fef8e22ad3fbc99b4b8a5af0"></p>
+<p>しばらく待つと画面左下に更新に成功しましたとメッセージが出ます。他にエラーメッセージがでなければ成功です。</p>
+<p><img src="https://i.gyazo.com/55bd6317e3fa50bd9a246042b4bcf59b.png" alt="55bd6317e3fa50bd9a246042b4bcf59b"></p>
+<p>このようにまた編集できないようなり、設定が完了します。</p>
+<h2 id="http-トリガー-url-の確認"><a name="http-トリガー-url-の確認" class="plugin-anchor" href="#http-トリガー-url-の確認"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP トリガー URL の確認</h2>
+<p><img src="https://i.gyazo.com/fbbbb720ef8b6304f1ff98d664d17717.png" alt="fbbbb720ef8b6304f1ff98d664d17717"></p>
+<p>HTTP トリガーの項目を確認します。</p>
+<p><img src="https://i.gyazo.com/df338f511531ab6435ea2c3ba0175330.png" alt="df338f511531ab6435ea2c3ba0175330"></p>
+<p>このボタンをクリックしてクリップボードにHTTP トリガー URL をコピーします。</p>
+<p><img src="https://i.gyazo.com/88d466a827bb7d34a757a320f292bd18.png" alt="88d466a827bb7d34a757a320f292bd18"></p>
+<p>コピーができると、このようにコピーしました。と出ます。</p>
+<p>この設定を LINE BOT の Webhook 設定に使用します。</p>
+<h2 id="line-developers-で-webhook-の設定をする"><a name="line-developers-で-webhook-の設定をする" class="plugin-anchor" href="#line-developers-で-webhook-の設定をする"><i class="fa fa-link" aria-hidden="true"></i></a>LINE Developers で Webhook の設定をする</h2>
+<p><img src="https://i.gyazo.com/457de21c86739267afefb13436823a3f.png" alt="457de21c86739267afefb13436823a3f"></p>
+<p><a href="https://developers.line.biz/console/" target="_blank">LINE Developers</a> を、ブラウザの別のタブで開きます。このように今回使う LINE BOT の Messaging API 設定に移動します。</p>
+<p><img src="https://i.gyazo.com/22a1db1b9049a7cc5187de9489062c7b.png" alt="22a1db1b9049a7cc5187de9489062c7b"></p>
+<p>スクロールして Webhook 設定の項目を見つけて、編集ボタンをクリックします。</p>
+<p><img src="https://i.gyazo.com/90667fd5ab304648436d1e84ed94f9d0.png" alt="90667fd5ab304648436d1e84ed94f9d0"></p>
+<p>さきほどコピーした URL を Webhook URL の欄にペーストして更新ボタンをクリックします。</p>
+<p>また、Webhook の利用がオンになっていることも確認してきましょう。まれにオフになっているので、その時はオンにしましょう。</p>
+<p>これで LINE BOT の設定は完了です。</p>
+<h2 id="動かしてみる"><a name="動かしてみる" class="plugin-anchor" href="#動かしてみる"><i class="fa fa-link" aria-hidden="true"></i></a>動かしてみる</h2>
+<p><img src="https://i.gyazo.com/66faa3725ee4bffbcf17cee5b31fdb51.png" alt="66faa3725ee4bffbcf17cee5b31fdb51"></p>
+<p>今回動かす LINE BOT でメッセージを送ってみると、オウム返しが返ってきます！</p>
+<p>サーバレスな AWS Lambda の挙動になるので、最初の 1 回のアクセスは、コールドスタートというサーバーの起動込みの動作が行われるので 5 ～ 10 秒程度の間があります。</p>
+<p>そのあと、直後に続けてメッセージするのは素早く帰ってきます。しばらくアクセスしていないと、またコールドスタートがはじまります。</p>
+<p>参考文献 : <a href="https://zenn.dev/yoshii0110/articles/0d50e872b64f59" target="_blank">Lambdaの実行環境について(コールドスタートとウォームスタート)</a></p>
+<h2 id="次は"><a name="次は" class="plugin-anchor" href="#次は"><i class="fa fa-link" aria-hidden="true"></i></a>次は</h2>
+<p>左のメニューから、次に進みましょう。</p>
 
                                 
                                 </section>
@@ -320,7 +441,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"previous":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"path":"07-cloud-environment.md","ref":"07-cloud-environment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"08-cloud-line-bot.md","mtime":"2022-10-20T04:56:25.406Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-20T04:56:29.500Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"previous":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"path":"07-cloud-environment.md","ref":"07-cloud-environment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"08-cloud-line-bot.md","mtime":"2022-10-21T04:22:10.763Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-21T04:23:46.753Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
