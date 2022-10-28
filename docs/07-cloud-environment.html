@@ -343,7 +343,7 @@
 <p><img src="https://i.gyazo.com/837d56ba51a68dbb5c7129b209ff8b0d.png" alt="837d56ba51a68dbb5c7129b209ff8b0d"></p>
 <p>すでに取得されていた場合は、この後の作業で、このようなエラーが起きます。</p>
 <p>ですので、なるべく重複しない URL を決めておきましょう。</p>
-<p><code>（自分の名前の英語名）-（今回のプロジェクト名）-（今日の日付）-（ランダム値）-linebot</code> と決めておきましょう。</p>
+<p><code>（自分の名前の英語名）-（今回のプロジェクト名）-（今日の日付）-（ランダム値）</code> と決めておきましょう。</p>
 <p>たとえば、</p>
 <ul>
 <li>自分の名前の英語名<ul>
@@ -351,7 +351,7 @@
 </ul>
 </li>
 <li>今回のプロジェクト名<ul>
-<li>たとえば myproject</li>
+<li>たとえば httpsample</li>
 </ul>
 </li>
 <li>今日の日付<ul>
@@ -364,7 +364,7 @@
 </ul>
 </li>
 </ul>
-<p>でしたら、<code>yamada-taro-myproject-20221021-2736-linebot</code> のようになります。</p>
+<p>でしたら、<code>yamada-taro-httpsample-20221021-2736</code> のようになります。</p>
 <p>とくにランダム値をつけないと推測されやすくなり、他との重複もしやすくなるので、必ずつけるようにしましょう。</p>
 <h3 id="ランダム値の作り方"><a name="ランダム値の作り方" class="plugin-anchor" href="#ランダム値の作り方"><i class="fa fa-link" aria-hidden="true"></i></a>ランダム値の作り方</h3>
 <p>なお、ランダム値を手軽にやれるおススメは、<a href="https://www.google.com/search?q=%E4%B9%B1%E6%95%B0" target="_blank">Google 検索で「乱数」を検索</a>して上部に乱数ジェネレータが出てくるので、これを使うことです。</p>
@@ -439,7 +439,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"next":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"path":"08-cloud-line-bot.md","ref":"08-cloud-line-bot.md","articles":[]},"previous":{"title":"Discover Flow 体験","level":"1.8","depth":1,"path":"06-discover-flow.md","ref":"06-discover-flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"07-cloud-environment.md","mtime":"2022-10-28T02:44:25.980Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-28T02:46:27.103Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"next":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"path":"08-cloud-line-bot.md","ref":"08-cloud-line-bot.md","articles":[]},"previous":{"title":"Discover Flow 体験","level":"1.8","depth":1,"path":"06-discover-flow.md","ref":"06-discover-flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"07-cloud-environment.md","mtime":"2022-10-28T02:49:26.281Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-28T02:50:42.285Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
