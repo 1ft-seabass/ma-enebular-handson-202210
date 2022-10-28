@@ -323,6 +323,51 @@
 <p><img src="https://i.gyazo.com/6692cdf781b7a65707ac51925347925d.png" alt="6692cdf781b7a65707ac51925347925d"></p>
 <p><a href="https://docs.enebular.com/ja/getstarted/cloudeeprepareenvironment" target="_blank">クラウド実行環境の準備 · enebular</a> </p>
 <p>こちらの記事を参考に、クラウド実行環境の作成とLCDPノードのインポートを行います。</p>
+<h2 id="クラウド実行環境のフローの作成"><a name="クラウド実行環境のフローの作成" class="plugin-anchor" href="#クラウド実行環境のフローの作成"><i class="fa fa-link" aria-hidden="true"></i></a>クラウド実行環境のフローの作成</h2>
+<p><img src="https://i.gyazo.com/fdc01ba043368f62c7b2cce069fcaa76.png" alt="fdc01ba043368f62c7b2cce069fcaa76"></p>
+<p><a href="https://docs.enebular.com/ja/getstarted/CloudEEScheduleTrigger.html" target="_blank">クラウド実行環境でのスケジュールトリガーによるフローの実行 · enebular</a></p>
+<p>こちらの記事を参考に、新しく flow-http-handson-sample フローを作ってから、</p>
+<ul>
+<li>LCDPノードの利用</li>
+<li>ノードのインストール</li>
+<li>タイムスタンプの取得と表示</li>
+<li>クラウド実行環境へのフローのデプロイ</li>
+</ul>
+<p>まで、進めます。</p>
+<h2 id="事前に-http-トリガーの-url-を考えておきます"><a name="事前に-http-トリガーの-url-を考えておきます" class="plugin-anchor" href="#事前に-http-トリガーの-url-を考えておきます"><i class="fa fa-link" aria-hidden="true"></i></a>事前に HTTP トリガーの URL を考えておきます</h2>
+<p>HTTP トリガーの URL は enebular の他のユーザーやプロジェクトも含めて共有して使っています。</p>
+<p>もし使いたい URL が他のユーザーやプロジェクトが、すでに取得していた場合に、設定することができずエラーになります。</p>
+<p><img src="https://i.gyazo.com/837d56ba51a68dbb5c7129b209ff8b0d.png" alt="837d56ba51a68dbb5c7129b209ff8b0d"></p>
+<p>すでに取得されていた場合は、この後の作業で、このようなエラーが起きます。</p>
+<p>ですので、なるべく重複しない URL を決めておきましょう。</p>
+<p><code>（自分の名前の英語名）-（今回のプロジェクト名）-（今日の日付）-（ランダム値）-linebot</code> と決めておきましょう。</p>
+<p>たとえば、</p>
+<ul>
+<li>自分の名前の英語名<ul>
+<li>山田太郎でしたら yamada-taro</li>
+</ul>
+</li>
+<li>今回のプロジェクト名<ul>
+<li>たとえば myproject</li>
+</ul>
+</li>
+<li>今日の日付<ul>
+<li>2022 年 10 月 21 なら 20221021</li>
+</ul>
+</li>
+<li>ランダム値<ul>
+<li>3 桁以上のランダム値　例：2736</li>
+<li>やり方は後述します</li>
+</ul>
+</li>
+</ul>
+<p>でしたら、<code>yamada-taro-myproject-20221021-2736-linebot</code> のようになります。</p>
+<p>とくにランダム値をつけないと推測されやすくなり、他との重複もしやすくなるので、必ずつけるようにしましょう。</p>
+<h3 id="ランダム値の作り方"><a name="ランダム値の作り方" class="plugin-anchor" href="#ランダム値の作り方"><i class="fa fa-link" aria-hidden="true"></i></a>ランダム値の作り方</h3>
+<p>なお、ランダム値を手軽にやれるおススメは、<a href="https://www.google.com/search?q=%E4%B9%B1%E6%95%B0" target="_blank">Google 検索で「乱数」を検索</a>して上部に乱数ジェネレータが出てくるので、これを使うことです。</p>
+<p><a href="https://www.google.com/search?q=%E4%B9%B1%E6%95%B0" target="_blank">Google 検索で「乱数」を検索</a></p>
+<p><img src="https://i.gyazo.com/d939bfd4e2ff24ae75256186b51153c9.png" alt="d939bfd4e2ff24ae75256186b51153c9"></p>
+<p>右側の設定を最小を 1 で最大を 100000 にします。生成ボタンをクリックして3 桁以上のランダム値がでたら採用します。</p>
 <h2 id="クラウド実行環境でのhttpトリガーによるフローの実行"><a name="クラウド実行環境でのhttpトリガーによるフローの実行" class="plugin-anchor" href="#クラウド実行環境でのhttpトリガーによるフローの実行"><i class="fa fa-link" aria-hidden="true"></i></a>クラウド実行環境でのHTTPトリガーによるフローの実行</h2>
 <p><img src="https://i.gyazo.com/756b5862faab1e4fb1403bec4ac8b1fd.png" alt="756b5862faab1e4fb1403bec4ac8b1fd"></p>
 <p><a href="https://docs.enebular.com/ja/getstarted/CloudEEHTTPTrigger.html" target="_blank">クラウド実行環境でのHTTPトリガーによるフローの実行 · enebular</a></p>
@@ -372,7 +417,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"next":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"path":"08-cloud-line-bot.md","ref":"08-cloud-line-bot.md","articles":[]},"previous":{"title":"Discover Flow 体験","level":"1.8","depth":1,"path":"06-discover-flow.md","ref":"06-discover-flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"07-cloud-environment.md","mtime":"2022-10-20T04:42:29.612Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-28T00:32:16.084Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"プロジェクトにクラウド環境の作成","level":"1.9","depth":1,"next":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"path":"08-cloud-line-bot.md","ref":"08-cloud-line-bot.md","articles":[]},"previous":{"title":"Discover Flow 体験","level":"1.8","depth":1,"path":"06-discover-flow.md","ref":"06-discover-flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"07-cloud-environment.md","mtime":"2022-10-28T00:42:51.639Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-28T00:42:55.449Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
