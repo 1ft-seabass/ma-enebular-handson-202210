@@ -10,3 +10,5 @@
 - [Discover Flow 体験](06-discover-flow.md)
 - [プロジェクトにクラウド環境の作成](07-cloud-environment.md)
 - [クラウド実行環境 LINE BOT 作成](08-cloud-line-bot.md)
+- [LINE Notify を動かしてみよう](09-line-notify.md)
+- [Airtable を動かしてみよう](10-airtable.md)

@@ -5,12 +5,12 @@
         <meta charset="UTF-8">
         <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#"></head>
         <meta property="og:type" content="article">
-        <meta property="og:url" content="01-introduction.html">
+        <meta property="og:url" content="09-line-notify.html">
         <meta property="og:image" content="https://i.gyazo.com/00afcc3de9343b7aa590beffd11e69b7.png">
-        <meta property="og:title" content="[enebular ハンズオン資料] はじめに">
+        <meta property="og:title" content="[enebular ハンズオン資料] LINE Notify を動かしてみよう">
         <meta property="og:description" content="enebular ハンズオン資料です">
         <meta property="og:locale" content="ja">
-        <title>[enebular ハンズオン資料] はじめに</title>
+        <title>[enebular ハンズオン資料] LINE Notify を動かしてみよう</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="enebular ハンズオン資料です">
         <meta name="generator" content="HonKit 3.7.4">
@@ -75,10 +75,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="02-enebular-start.html" />
+    <link rel="next" href="10-airtable.html" />
     
     
-    <link rel="prev" href="00-preparation/" />
+    <link rel="prev" href="08-cloud-line-bot.html" />
     
 
     </head>
@@ -133,7 +133,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="01-introduction.html">
+        <li class="chapter " data-level="1.3" data-path="01-introduction.html">
             
                 <a href="01-introduction.html">
             
@@ -237,7 +237,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="09-line-notify.html">
+        <li class="chapter active" data-level="1.11" data-path="09-line-notify.html">
             
                 <a href="09-line-notify.html">
             
@@ -293,7 +293,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >はじめに</a>
+        <a href="." >LINE Notify を動かしてみよう</a>
     </h1>
 </div>
 
@@ -308,32 +308,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="はじめに"><a name="はじめに" class="plugin-anchor" href="#はじめに"><i class="fa fa-link" aria-hidden="true"></i></a>はじめに</h1>
-<h2 id="enebular-とは"><a name="enebular-とは" class="plugin-anchor" href="#enebular-とは"><i class="fa fa-link" aria-hidden="true"></i></a>enebular とは</h2>
+                                <h1 id="line-notify-を動かしてみよう"><a name="line-notify-を動かしてみよう" class="plugin-anchor" href="#line-notify-を動かしてみよう"><i class="fa fa-link" aria-hidden="true"></i></a>LINE Notify を動かしてみよう</h1>
+<h2 id="line-notify-とは"><a name="line-notify-とは" class="plugin-anchor" href="#line-notify-とは"><i class="fa fa-link" aria-hidden="true"></i></a>LINE Notify とは</h2>
+<p><img src="https://i.gyazo.com/5cf50e16f926ec4f0bdc17f76b5558e5.png" alt="image"></p>
+<p>LINE Notify の大まかな仕組みを把握します。</p>
+<p><img src="https://i.gyazo.com/5ee7b4482f1b28caaf860e72744cd2f5.png" alt="image"></p>
+<p>LINE Notify <a href="https://notify-bot.line.me/ja/" target="_blank">https://notify-bot.line.me/ja/</a></p>
 <blockquote>
-<p><img src="https://i.gyazo.com/627c47635133e03b57279d3292cdbf29.png" alt="image"></p>
-<p>enebular<br><a href="https://www.enebular.com/ja/" target="_blank">https://www.enebular.com/ja/</a></p>
+<p>Webサービスと連携すると、LINEが提供する公式アカウント&quot;LINE Notify&quot;から通知が届きます。
+複数のサービスと連携でき、グループでも通知を受信することが可能です。</p>
 </blockquote>
-<p>あらゆるデバイスとクラウドサービスを「つなぐ」、IoT のためのデータ連携プラットフォームです。アカウント登録をすることで無料で始められます。</p>
-<p>HTTP でつながる様々な API サービスとつながります。今回のハッカソンで扱う LINE やメタデータの API へも、もちろんつながります。</p>
-<p>enebular のドキュメントはこちらです。</p>
-<p><img src="https://i.gyazo.com/e6044a271c9e7913c5a34a378a8ed48b.png" alt="image"></p>
-<blockquote>
-<p>Introduction · enebular<br><a href="https://docs.enebular.com/ja/" target="_blank">https://docs.enebular.com/ja/</a></p>
-</blockquote>
-<h2 id="enebular-は-node-red-というローコードツールがベース"><a name="enebular-は-node-red-というローコードツールがベース" class="plugin-anchor" href="#enebular-は-node-red-というローコードツールがベース"><i class="fa fa-link" aria-hidden="true"></i></a>enebular は Node-RED というローコードツールがベース</h2>
-<p>enebular は Node-RED というローコードツールがベースにあります。</p>
-<p>ローコードツールとは、あまりプログラムを書かずに、目で見て機能をポチポチつなぐ操作で、仕組みが作れるツールの総称です。そのうちのひとつが Node-RED です。</p>
-<p><img src="https://i.gyazo.com/a93a65feb868db86c580e9f495d8a9e0.png" alt="image"></p>
-<p>enebular ではノードという機能のかたまりをつないで、フローというデータの流れを作り、データや IoT につながります。</p>
-<p><img src="https://i.gyazo.com/82277372eeca4580a378bbc8bcc97769.jpg" alt="image"></p>
-<p>たとえば、このようなフローで柴犬画像を返してくれる API に HTTP でつないで画像を表示する仕組みがすぐに作れます。</p>
-<p>プログラムを書いた経験があまりなくてもノードの機能を試して理解しながらつなげば、仕組みがつくれます。</p>
-<p><img src="https://i.gyazo.com/0f0d8330e70baee4b216f55c51881f0b.png" alt="image"></p>
-<p>Node-RED の詳しい使い方は Node-RED の日本のコミュニティページを見てみると良いでしょう。</p>
-<blockquote>
-<p>ドキュメント : Node-RED日本ユーザ会<br><a href="https://nodered.jp/docs/" target="_blank">https://nodered.jp/docs/</a></p>
-</blockquote>
+<p><img src="https://i.gyazo.com/8dddc3621b4a77af65be36d7907cd02a.png" alt="image"></p>
+<p>つまり「LINE Notifyと連携を行うことで、LINEユーザーが簡単にサービスの通知を受信できるようになります」</p>
+<h2 id="今回のプログラム"><a name="今回のプログラム" class="plugin-anchor" href="#今回のプログラム"><i class="fa fa-link" aria-hidden="true"></i></a>今回のプログラム</h2>
+<p><img src="https://i.gyazo.com/5807b6ab26a7ca5de0947df6603af768.png" alt="5807b6ab26a7ca5de0947df6603af768"></p>
+<p>inject ノードをクリックしてメッセージを送ると、タイムスタンプが LINE Notify に送られます。</p>
+<h2 id="以前作業していた柴犬-api-のフローを編集しましょう"><a name="以前作業していた柴犬-api-のフローを編集しましょう" class="plugin-anchor" href="#以前作業していた柴犬-api-のフローを編集しましょう"><i class="fa fa-link" aria-hidden="true"></i></a>以前作業していた柴犬 API のフローを編集しましょう</h2>
+<p>以前作業していた柴犬 API や LINE  BOT のフローをプロジェクトから選択してスタートしましょう。</p>
+<h3 id="フローのタブを追加して今回のフローをはじめる"><a name="フローのタブを追加して今回のフローをはじめる" class="plugin-anchor" href="#フローのタブを追加して今回のフローをはじめる"><i class="fa fa-link" aria-hidden="true"></i></a>フローのタブを追加して今回のフローをはじめる</h3>
+<p>今回のフローは新しいタブで進めましょう。</p>
+<p><img src="https://i.gyazo.com/bfacbb2d76a7dd13d00cde6b970fb7d5.png" alt="bfacbb2d76a7dd13d00cde6b970fb7d5"></p>
+<p>こちらの＋ボタンからフローのタブを作成します。新しくできたフローのタブで作業をはじめましょう。</p>
+<h2 id="line-notify-のアクセストークンを準備"><a name="line-notify-のアクセストークンを準備" class="plugin-anchor" href="#line-notify-のアクセストークンを準備"><i class="fa fa-link" aria-hidden="true"></i></a>LINE Notify のアクセストークンを準備</h2>
+<p><img src="https://i.gyazo.com/abee7f38d2db6897c61cdb42fc29a83c.png" alt="image"></p>
+<p>LINE Notify のアクセストークンを準備します。</p>
+<h2 id="line-notify-のノードはこちらを使います"><a name="line-notify-のノードはこちらを使います" class="plugin-anchor" href="#line-notify-のノードはこちらを使います"><i class="fa fa-link" aria-hidden="true"></i></a>LINE Notify のノードはこちらを使います</h2>
+<p><img src="https://i.gyazo.com/b0d3b2e906021dd90898405676cde649.png" alt="b0d3b2e906021dd90898405676cde649"></p>
+<p>以前インストールした node-red-contrib-line-messaging-api の Notify ノードを使います。</p>
+<h2 id="inject-ノードと-notify-ノードを配置します"><a name="inject-ノードと-notify-ノードを配置します" class="plugin-anchor" href="#inject-ノードと-notify-ノードを配置します"><i class="fa fa-link" aria-hidden="true"></i></a>inject ノードと Notify ノードを配置します</h2>
+<p><img src="https://i.gyazo.com/b5462e9a6a60b9d07b6d421eafefd417.png" alt="b5462e9a6a60b9d07b6d421eafefd417"></p>
+<p>このように inject ノードと Notify ノードを配置します。</p>
+<h2 id="notify-ノードの設定"><a name="notify-ノードの設定" class="plugin-anchor" href="#notify-ノードの設定"><i class="fa fa-link" aria-hidden="true"></i></a>Notify ノードの設定</h2>
+<p><img src="https://i.gyazo.com/d9f2ef790124007215da22d2a88c711e.png" alt="d9f2ef790124007215da22d2a88c711e"></p>
+<p>Notify ノードをダブルクリックしてプロパティを表示します。</p>
+<p><img src="https://i.gyazo.com/7d67b1ffadd16f3a32b6198a3854addf.png" alt="7d67b1ffadd16f3a32b6198a3854addf"></p>
+<p>プロパティが表示されたら、LINE Notify AccessToken に、自分の作成した LINE Notify のアクセストークン入力して、完了ボタンをクリックします。</p>
+<h2 id="デプロイする"><a name="デプロイする" class="plugin-anchor" href="#デプロイする"><i class="fa fa-link" aria-hidden="true"></i></a>デプロイする</h2>
+<p><img src="https://i.gyazo.com/20b1df2261adbfade8044ce441a30c35.png" alt="20b1df2261adbfade8044ce441a30c35"></p>
+<p>保存ボタンをクリックしてデプロイします。</p>
+<h2 id="動かしてみる"><a name="動かしてみる" class="plugin-anchor" href="#動かしてみる"><i class="fa fa-link" aria-hidden="true"></i></a>動かしてみる</h2>
+<p><img src="https://i.gyazo.com/07430f24f9c6f870da7307c825f8d4ed.png" alt="07430f24f9c6f870da7307c825f8d4ed"></p>
+<p>inject ノードをクリックしてメッセージを送ってみましょう。</p>
+<p><img src="https://i.gyazo.com/5807b6ab26a7ca5de0947df6603af768.png" alt="5807b6ab26a7ca5de0947df6603af768"></p>
+<p>今回はタイムスタンプが LINE Notify に送られます。</p>
+<h2 id="エクストラ"><a name="エクストラ" class="plugin-anchor" href="#エクストラ"><i class="fa fa-link" aria-hidden="true"></i></a>エクストラ</h2>
+<ul>
+<li>inject ノードのメッセージを変更して自分なりにメッセージを変更してみましょう<ul>
+<li>データタイプを文字列にして「こんにちは！」をおくってみる</li>
+</ul>
+</li>
+<li>LINE Notify API ドキュメント <a href="https://notify-bot.line.me/doc/ja/" target="_blank">https://notify-bot.line.me/doc/ja/</a> を読んで理解を深めましょう</li>
+</ul>
 <h2 id="次は"><a name="次は" class="plugin-anchor" href="#次は"><i class="fa fa-link" aria-hidden="true"></i></a>次は</h2>
 <p>左のメニューから、次に進みましょう。</p>
 
@@ -363,12 +388,12 @@
 
             
                 
-                <a href="00-preparation/" class="navigation navigation-prev " aria-label="Previous page: 事前準備">
+                <a href="08-cloud-line-bot.html" class="navigation navigation-prev " aria-label="Previous page: クラウド実行環境 LINE BOT 作成">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="02-enebular-start.html" class="navigation navigation-next " aria-label="Next page: enebular の準備">
+                <a href="10-airtable.html" class="navigation navigation-next " aria-label="Next page: Airtable を動かしてみよう">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -379,7 +404,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"はじめに","level":"1.3","depth":1,"next":{"title":"enebular の準備","level":"1.4","depth":1,"path":"02-enebular-start.md","ref":"02-enebular-start.md","articles":[]},"previous":{"title":"事前準備","level":"1.2","depth":1,"path":"00-preparation/README.md","ref":"00-preparation/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"01-introduction.md","mtime":"2022-10-20T01:11:46.111Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-28T00:32:16.084Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"LINE Notify を動かしてみよう","level":"1.11","depth":1,"next":{"title":"Airtable を動かしてみよう","level":"1.12","depth":1,"path":"10-airtable.md","ref":"10-airtable.md","articles":[]},"previous":{"title":"クラウド実行環境 LINE BOT 作成","level":"1.10","depth":1,"path":"08-cloud-line-bot.md","ref":"08-cloud-line-bot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"09-line-notify.md","mtime":"2022-10-28T00:32:12.622Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-10-28T00:32:16.084Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
