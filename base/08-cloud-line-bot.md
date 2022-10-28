@@ -6,6 +6,14 @@
 
 クラウド実行環境 LINE BOT 作成を作成して、LINE BOT にメッセージを送ってみると、オウム返しが返ってきます！
 
+## エディタ画面を閉じましょう
+
+いま使っているエディタ画面の Chrome タブは閉じましょう。
+
+![image](https://i.gyazo.com/56405a922d23e4612caa8b3e0f1312f7.png)
+
+編集ボタンをクリックした、フローの詳細画面がある Chrome タブに戻ります。
+
 ## 今回の Discover Flow
 
 [lcdp-linebot-simple](https://enebular.com/discover/flow/67a6ffb1-a6e6-4b18-86dc-afe807f5ef97)

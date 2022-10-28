@@ -19,13 +19,19 @@ enebular のクラウド環境には以下の参考文献があります。
 
 こちらの記事を参考に、クラウド実行環境の作成とLCDPノードのインポートを行います。
 
+## 新しいフローを作りましょう
+
+![8d22f28117008204f57bcb688f23bb24](https://i.gyazo.com/8d22f28117008204f57bcb688f23bb24.png)
+
+プロジェクトで、新しく flow-http-handson-sample フローを作ります。
+
 ## クラウド実行環境のフローの作成
 
 ![fdc01ba043368f62c7b2cce069fcaa76](https://i.gyazo.com/fdc01ba043368f62c7b2cce069fcaa76.png)
 
 [クラウド実行環境でのスケジュールトリガーによるフローの実行 · enebular](https://docs.enebular.com/ja/getstarted/CloudEEScheduleTrigger.html)
 
-こちらの記事を参考に、新しく flow-http-handson-sample フローを作ってから、
+こちらの記事を参考に、
 
 - LCDPノードの利用
 - ノードのインストール
