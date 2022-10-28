@@ -279,7 +279,7 @@ HTTP トリガーのパスを linebot と入力します。
 
 設定画面で、HTTP トリガーの URL ができるので、右のコピーボタンをクリックして URL を取得します。
 
-![5ba678e5cc27062a025502238dc8dda0](https://i.gyazo.com/5ba678e5cc27062a025502238dc8dda0.png)
+![c2e45eb04e10e3243ef1eeaf43e1926e](https://i.gyazo.com/c2e45eb04e10e3243ef1eeaf43e1926e.png)
 
 この URL でブラウザアクセスしてみると、このような画面が表示されます。
 
