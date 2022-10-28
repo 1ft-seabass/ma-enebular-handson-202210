@@ -196,6 +196,7 @@ inject ノードのボタンをクリックして、動作確認してみまし�
 
 - node-red-contrib-image-output ノードのプロパティに Width 160 という画像の横幅を指定する値があるので 320 にして大きく画像を表示してみましょう。
 - 柴犬画像 API 、実は他の動物も行けます。http request ノードのプロパティの URL を変更して、鳥 https://shibe.online/api/birds や、猫 https://shibe.online/api/cats を試してみましょう。
+- 余裕があれば、柴犬画像 API などがあつまる public-apis https://github.com/public-apis/public-apis の紹介
 
 ## 次は
 
