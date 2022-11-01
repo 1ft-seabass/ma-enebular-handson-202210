@@ -65,9 +65,11 @@ HTTP トリガーで設定した URL にアクセスできたら、さきほど�
 
 ## TIPS: アクセスしたパス
 
-`msg.req` に Node.js に準拠した Express リクエストオブジェクト https://expressjs.com/ja/4x/api.html#req の内容で入っています。
+`msg.req` に Node.js に準拠した Express リクエストオブジェクトの内容で入っています。
 
-たとえば、アクセスしたパスは `msg.req.url` に入っていています。TTP トリガーで設定した URL そのままでアクセスすると `/HTTPトリガーのID/` となります。
+Express リクエストオブジェクト → https://expressjs.com/ja/4x/api.html#req 
+
+たとえば、アクセスしたパスは `msg.req.url` に入っていています。HTTP トリガーで設定した URL そのままでアクセスすると `/HTTPトリガーのID/` となります。
 
 この HTTP トリガーの ID は今回のクラウド開発環境の設定で HTTP トリガーを設定した時のパスそのものです。
 
