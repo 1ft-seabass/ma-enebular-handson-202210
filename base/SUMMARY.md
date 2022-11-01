@@ -12,3 +12,6 @@
 - [クラウド実行環境 LINE BOT 作成](08-cloud-line-bot.md)
 - [LINE Notify を動かしてみよう](09-line-notify.md)
 - [Airtable を動かしてみよう](10-airtable.md)
+- Tips
+  - [LCDP ノードを使ったフローのデバッグ方法](70-01-tips-lcdp-debug.md)
+  - [フロー JSON のインポート](70-02-tips-flow-import.md)
