@@ -15,3 +15,4 @@
 - Tips
   - [LCDP ノードを使ったフローのデバッグ方法](70-01-tips-lcdp-debug.md)
   - [フロー JSON のインポート](70-02-tips-flow-import.md)
+  - [フロー JSON のエクスポート](70-02-tips-flow-export.md)
