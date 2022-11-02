@@ -16,3 +16,4 @@
   - [LCDP ノードを使ったフローのデバッグ方法](70-01-tips-lcdp-debug.md)
   - [フロー JSON のインポート](70-02-tips-flow-import.md)
   - [フロー JSON のエクスポート](70-03-tips-flow-export.md)
+  - [enebular と Metadata 感情解析 API をつないでみる](70-04-tips-metadata.md)
