@@ -5,12 +5,12 @@
         <meta charset="UTF-8">
         <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#"></head>
         <meta property="og:type" content="article">
-        <meta property="og:url" content="70-01-tips-lcdp-debug.html">
+        <meta property="og:url" content="70-03-tips-flow-export.html">
         <meta property="og:image" content="https://i.gyazo.com/00afcc3de9343b7aa590beffd11e69b7.png">
-        <meta property="og:title" content="[enebular ハンズオン資料] LCDP ノードを使ったフローのデバッグ方法">
+        <meta property="og:title" content="[enebular ハンズオン資料] フロー JSON のエクスポート">
         <meta property="og:description" content="enebular ハンズオン資料です">
         <meta property="og:locale" content="ja">
-        <title>[enebular ハンズオン資料] LCDP ノードを使ったフローのデバッグ方法</title>
+        <title>[enebular ハンズオン資料] フロー JSON のエクスポート</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="enebular ハンズオン資料です">
         <meta name="generator" content="HonKit 3.7.4">
@@ -75,8 +75,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="70-02-tips-flow-import.html" />
     
+    <link rel="prev" href="70-02-tips-flow-import.html" />
     
 
     </head>
@@ -275,7 +275,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.13.1" data-path="70-01-tips-lcdp-debug.html">
+        <li class="chapter " data-level="1.13.1" data-path="70-01-tips-lcdp-debug.html">
             
                 <a href="70-01-tips-lcdp-debug.html">
             
@@ -301,7 +301,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.3" data-path="70-03-tips-flow-export.html">
+        <li class="chapter active" data-level="1.13.3" data-path="70-03-tips-flow-export.html">
             
                 <a href="70-03-tips-flow-export.html">
             
@@ -349,7 +349,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >LCDP ノードを使ったフローのデバッグ方法</a>
+        <a href="." >フロー JSON のエクスポート</a>
     </h1>
 </div>
 
@@ -364,56 +364,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lcdp-ノードを使ったフローのデバッグ方法"><a name="lcdp-ノードを使ったフローのデバッグ方法" class="plugin-anchor" href="#lcdp-ノードを使ったフローのデバッグ方法"><i class="fa fa-link" aria-hidden="true"></i></a>LCDP ノードを使ったフローのデバッグ方法</h1>
-<p>LCDP ノードを使ってクラウド開発環境へデプロイしたフローは、クラウド開発環境のログ機能を使ってデバッグします。</p>
-<p><img src="https://i.gyazo.com/e48075e0e15bcbe721a6623f940359c6.png" alt="e48075e0e15bcbe721a6623f940359c6"></p>
-<p>たとえばこのようなシンプルな LCDP in と out で出来たフローがあります。</p>
-<p><img src="https://i.gyazo.com/43b5cd24c092060c69a3a453e1224731.png" alt="43b5cd24c092060c69a3a453e1224731"></p>
-<p>LCDP in ノードで外部からデータが送られてきたときのデータを見たい場合は、LCDP in ノードに debug ノードをつけます。</p>
-<p><img src="https://i.gyazo.com/db371b6a9768a5ed353e1cb948e5bb0e.png" alt="db371b6a9768a5ed353e1cb948e5bb0e"></p>
-<p>debug ノードをダブルクリックしてプロパティを表示します。</p>
-<p>出力先がデフォルトだとデバッグウィンドウのみです。このままだと、debug ノードは、表示している Web エディタの中でフローを動かしたときのデータしか見れません。</p>
-<h2 id="システムコンソールをチェック"><a name="システムコンソールをチェック" class="plugin-anchor" href="#システムコンソールをチェック"><i class="fa fa-link" aria-hidden="true"></i></a>システムコンソールをチェック</h2>
-<p><img src="https://i.gyazo.com/484d9532aa619d3f7d4f2eef0476a0fc.png" alt="484d9532aa619d3f7d4f2eef0476a0fc"></p>
-<p>システムコンソールすると、ここに到着したデータがクラウド開発環境のログにも出力されます。設定したら完了ボタンをクリックします。</p>
-<p><img src="https://i.gyazo.com/88b47e0e0a4126e8ae097033396c1ffc.png" alt="88b47e0e0a4126e8ae097033396c1ffc"></p>
-<p>フローを保存します。</p>
-<h2 id="フローをクラウド開発環境にデプロイ"><a name="フローをクラウド開発環境にデプロイ" class="plugin-anchor" href="#フローをクラウド開発環境にデプロイ"><i class="fa fa-link" aria-hidden="true"></i></a>フローをクラウド開発環境にデプロイ</h2>
-<p><img src="https://i.gyazo.com/3986eacb92c88bb8fe02aefd0fc9e094.png" alt="3986eacb92c88bb8fe02aefd0fc9e094"></p>
-<p>フローを閉じてクラウド開発環境画面で今回のフローをデプロイします。</p>
-<p><img src="https://i.gyazo.com/92f32a8ba3884083ffec91ce8e02ee38.png" alt="92f32a8ba3884083ffec91ce8e02ee38"></p>
-<p>HTTP トリガーで設定した URL にブラウザにアクセスして動かしてみましょう。</p>
-<p><img src="https://i.gyazo.com/21be7a7b449803eb85c84d2d85a36ce9.png" alt="21be7a7b449803eb85c84d2d85a36ce9"></p>
-<p>たとえば、HTTP トリガーで設定した URL に <code>?message=hello!enebular!</code> をつけて GET リクエストでパラメータをつけたアクセスをします。</p>
-<h2 id="ログを確認"><a name="ログを確認" class="plugin-anchor" href="#ログを確認"><i class="fa fa-link" aria-hidden="true"></i></a>ログを確認</h2>
-<p>HTTP トリガーで設定した URL にアクセスできたら、さきほどの LCDP in ノードの先の debug ノードが反応したはずです。</p>
-<p><img src="https://i.gyazo.com/d777e5f9ec1e051f1581a4c0fcc716da.png" alt="d777e5f9ec1e051f1581a4c0fcc716da"></p>
-<p>クラウド開発環境 &gt; 今回のクラウド開発環境をクリック &gt; 上部のメニュー &gt; ログ をクリックします。</p>
-<p><img src="https://i.gyazo.com/24059c628c2be692e03c004a90e4f9d5.png" alt="24059c628c2be692e03c004a90e4f9d5"></p>
-<p>このようにログが表示されるので、今回実行した日時のログのグループを右側のログリストから選択します。</p>
-<p><img src="https://i.gyazo.com/d71e7834e9a08f6cb0ab3810d7f95e73.png" alt="d71e7834e9a08f6cb0ab3810d7f95e73"></p>
-<p>たとえば、HTTP トリガーで設定した URL に <code>?message=hello!enebular!</code> をつけて GET リクエストでパラメータをつけたアクセスの場合は、さきほどの debug ノードが反応して、このようなデータが表示されます。</p>
-<h2 id="tips-よくあるデータの追い方"><a name="tips-よくあるデータの追い方" class="plugin-anchor" href="#tips-よくあるデータの追い方"><i class="fa fa-link" aria-hidden="true"></i></a>TIPS: よくあるデータの追い方</h2>
-<ul>
-<li>GET リクエストでパラメータをつけた場合<ul>
-<li><code>?message=hello!enebular!</code> のように URL のあとにつけたパラメータは <code>msg.payload</code> に入っています。</li>
-</ul>
-</li>
-<li>POST リクエストでJSON データを送った場合<ul>
-<li>ヘッダーで <code>Content-Type:application/json</code> を指定して JSON データを送った場合は <code>msg.payload</code> に送った JSON データが入っています。</li>
-</ul>
-</li>
-</ul>
-<h2 id="tips-アクセスしたパス"><a name="tips-アクセスしたパス" class="plugin-anchor" href="#tips-アクセスしたパス"><i class="fa fa-link" aria-hidden="true"></i></a>TIPS: アクセスしたパス</h2>
-<p><code>msg.req</code> に Node.js に準拠した Express リクエストオブジェクトの内容で入っています。</p>
-<p>Express リクエストオブジェクト → <a href="https://expressjs.com/ja/4x/api.html#req" target="_blank">https://expressjs.com/ja/4x/api.html#req</a> </p>
-<p>たとえば、アクセスしたパスは <code>msg.req.url</code> に入っていています。HTTP トリガーで設定した URL そのままでアクセスすると <code>/HTTPトリガーのID/</code> となります。</p>
-<p>この HTTP トリガーの ID は今回のクラウド開発環境の設定で HTTP トリガーを設定した時のパスそのものです。</p>
-<p><img src="https://i.gyazo.com/f93f0bbe56a8e7a8322403819acf7bd6.png" alt="f93f0bbe56a8e7a8322403819acf7bd6"></p>
-<p>パスは今回のクラウド開発環境の設定のこの部分です。</p>
-<p><code>https://lcdp003.enebular.com/hogehoge-project-202211-384764</code> であれば <code>/hogehoge-project-202211-384764/</code> となります。</p>
-<p>HTTP トリガーで設定した URL に <code>/hello/world</code> とつけた場合は <code>/HTTP トリガーのID/hello/world</code> となります。</p>
-<p><code>https://lcdp003.enebular.com/hogehoge-project-202211-384764/hello/world</code> であれば <code>/hogehoge-project-202211-384764/hello/world</code> となります。</p>
+                                <h1 id="フロー-json-のエクスポート"><a name="フロー-json-のエクスポート" class="plugin-anchor" href="#フロー-json-のエクスポート"><i class="fa fa-link" aria-hidden="true"></i></a>フロー JSON のエクスポート</h1>
+<p>enebular および Node-RED には、エクスポートというフローの JSON データを他のワークスペースで使えるように JSON データで書き出す機能があります。</p>
+<p>似た機能に Discover Flow での公開がありますが Discover Flow の場合は公開してほかの人が新しくフローアセットを作る形になるので、新規に仕組みを作るときに向いています。</p>
+<p>他の人が作業中のフローアセットには Discover Flow で追加で読み込めないので、フローのエクスポートを使うと、自分が作っている現状のフローをほかの人のつくっているフローへ加えることができます。</p>
+<h2 id="エクスポートするフローを選択"><a name="エクスポートするフローを選択" class="plugin-anchor" href="#エクスポートするフローを選択"><i class="fa fa-link" aria-hidden="true"></i></a>エクスポートするフローを選択</h2>
+<p><img src="https://i.gyazo.com/831719e8f5c40170b81c106b1f3fc3f4.png" alt="831719e8f5c40170b81c106b1f3fc3f4"></p>
+<p>たとえば、自分のワークスペースでエクスポートするフローを選択します。</p>
+<p><img src="https://i.gyazo.com/b08212f33c054b82525a05fbb0aa5438.png" alt="b08212f33c054b82525a05fbb0aa5438"></p>
+<p>右上のメニューボタンから書き出しをクリックします。</p>
+<p><img src="https://i.gyazo.com/3664259d8e894e0c3d1d01362c205791.png" alt="3664259d8e894e0c3d1d01362c205791"></p>
+<p>書き出しが表示されます。フローの書き出し部分で自分でエクスポートしたいノードが選択されているか確認します。</p>
+<p>確認できたら書き出しボタンをクリックすると、フローがクリップボードにコピーできます。</p>
+<p>これでエクスポートは完了です。</p>
+<h2 id="コピーされるデータの中身"><a name="コピーされるデータの中身" class="plugin-anchor" href="#コピーされるデータの中身"><i class="fa fa-link" aria-hidden="true"></i></a>コピーされるデータの中身</h2>
+<p><img src="https://i.gyazo.com/7bc6a7d4dc5b98fe6eaf08725962e680.png" alt="7bc6a7d4dc5b98fe6eaf08725962e680"></p>
+<p>コピーされるデータの中身は JSON タブで確認できます。</p>
+<h2 id="ダウンロードもできる"><a name="ダウンロードもできる" class="plugin-anchor" href="#ダウンロードもできる"><i class="fa fa-link" aria-hidden="true"></i></a>ダウンロードもできる</h2>
+<p><img src="https://i.gyazo.com/239c6ae57a5208a2062c18b793e56f33.png" alt="239c6ae57a5208a2062c18b793e56f33"></p>
+<p>クリップボードにコピーでなくフローのダウンロードもできます。ダウンロードボタンを押すことでファイルとして保存できます。</p>
+<h3 id="ダウンロードした-json-ファイルのインポート"><a name="ダウンロードした-json-ファイルのインポート" class="plugin-anchor" href="#ダウンロードした-json-ファイルのインポート"><i class="fa fa-link" aria-hidden="true"></i></a>ダウンロードした JSON ファイルのインポート</h3>
+<p><img src="https://i.gyazo.com/612865b8328a3a5d35e340646d5799d5.png" alt="612865b8328a3a5d35e340646d5799d5"></p>
+<p>この場合は、フローを使う他の人のワークスペースでドラッグアンドドロップするとインポートできます。</p>
+<h3 id="enebular-はフロー詳細ページでフローのダウンロードもできる"><a name="enebular-はフロー詳細ページでフローのダウンロードもできる" class="plugin-anchor" href="#enebular-はフロー詳細ページでフローのダウンロードもできる"><i class="fa fa-link" aria-hidden="true"></i></a>enebular はフロー詳細ページでフローのダウンロードもできる</h3>
+<p><img src="https://i.gyazo.com/f775856a82ac32b90efd98dd5646277d.png" alt="f775856a82ac32b90efd98dd5646277d"></p>
+<p>なお、このように enebular はフロー詳細ページで、さきほどのエクスポート機能によるダウンロードと同じように、フローのダウンロードもできます。</p>
+<p>編集画面に入らずフローがダウンロードできるのは良いですね。</p>
 
                                 
                                 </section>
@@ -441,10 +417,10 @@
 
             
                 
-                
-                <a href="70-02-tips-flow-import.html" class="navigation navigation-next navigation-unique" aria-label="Next page: フロー JSON のインポート">
-                    <i class="fa fa-angle-right"></i>
+                <a href="70-02-tips-flow-import.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: フロー JSON のインポート">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -453,7 +429,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"LCDP ノードを使ったフローのデバッグ方法","level":"1.13.1","depth":2,"next":{"title":"フロー JSON のインポート","level":"1.13.2","depth":2,"path":"70-02-tips-flow-import.md","ref":"70-02-tips-flow-import.md","articles":[]},"previous":{"title":"Tips","level":"1.13","depth":1,"ref":"","articles":[{"title":"LCDP ノードを使ったフローのデバッグ方法","level":"1.13.1","depth":2,"path":"70-01-tips-lcdp-debug.md","ref":"70-01-tips-lcdp-debug.md","articles":[]},{"title":"フロー JSON のインポート","level":"1.13.2","depth":2,"path":"70-02-tips-flow-import.md","ref":"70-02-tips-flow-import.md","articles":[]},{"title":"フロー JSON のエクスポート","level":"1.13.3","depth":2,"path":"70-03-tips-flow-export.md","ref":"70-03-tips-flow-export.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"70-01-tips-lcdp-debug.md","mtime":"2022-11-01T06:36:12.440Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-11-02T01:44:41.568Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"フロー JSON のエクスポート","level":"1.13.3","depth":2,"previous":{"title":"フロー JSON のインポート","level":"1.13.2","depth":2,"path":"70-02-tips-flow-import.md","ref":"70-02-tips-flow-import.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","hide-published-with","copy-code-button","intopic-toc","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","mode":"nested","maxDepth":6,"isCollapsed":true,"isScrollspyActive":true,"visible":true,"label":"In this article"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"enebular ハンズオン資料","language":"ja","gitbook":"*","description":"enebular ハンズオン資料です"},"file":{"path":"70-03-tips-flow-export.md","mtime":"2022-11-02T01:43:44.715Z","type":"markdown"},"gitbook":{"version":"3.7.4","time":"2022-11-02T01:44:41.568Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
